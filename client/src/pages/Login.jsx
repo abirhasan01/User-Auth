@@ -14,7 +14,7 @@ const Login = () => {
 
   const navigate = useNavigate()
 
-  const {backendUrl, setIsLoggedin} = useContext(AppContext)
+  const {backendUrl, setIsLoggedin, getUserData} = useContext(AppContext)
 
   const handleSubmit = async (e) => {
     try {
@@ -27,6 +27,8 @@ const Login = () => {
 
         if (data.success) {
           setIsLoggedin(true);
+          getUserData()
+          toast.success("Register Successfully")
           navigate("/");
         }else{
           toast.error(data.message)
@@ -40,6 +42,8 @@ const Login = () => {
 
         if (data.success) {
           setIsLoggedin(true);
+          getUserData()
+          toast.success("login Successfully")
           navigate("/");
         } else {
           toast.error(data.message);

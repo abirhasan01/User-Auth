@@ -1,4 +1,4 @@
-export const EMAIL_VERIFY_TEMPLATE = `
+const EMAIL_VERIFY_TEMPLATE = `
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -107,8 +107,7 @@ export const EMAIL_VERIFY_TEMPLATE = `
 </html>
 
 `
-
-export const PASSWORD_RESET_TEMPLATE = `
+const PASSWORD_RESET_TEMPLATE = `
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -218,3 +217,7 @@ export const PASSWORD_RESET_TEMPLATE = `
 </html>
 `
 
+module.exports = {
+  EMAIL_VERIFY_TEMPLATE,
+  PASSWORD_RESET_TEMPLATE
+}
